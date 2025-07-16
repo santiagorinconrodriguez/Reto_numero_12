@@ -182,16 +182,16 @@ jsonString = '''
 '''
 data = json.loads(jsonString)
 
-# Campos de alerta y variable relevante
+
 alertas = {
     'alertPrecip': 'prcp',
     'alertVelViento': 'velViento',
     'alertTmpMax': 'tmpMax',
     'alertTmpMin': 'tmpMin',
-    'alertAlertas': None  # solo alerta, no variable asociada
+    'alertAlertas': None  
 }
 
-# Recorremos días 0..7
+
 for i in range(8):
     fecha_unix = data['dt'][str(i)]
     fecha_legible = datetime.utcfromtimestamp(fecha_unix).strftime('%Y-%m-%d')
